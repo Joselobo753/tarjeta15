@@ -3,6 +3,8 @@ import PublicView from "../Views/PublicView";
 import PrivateView from "../Views/PrivateView";
 import RootView from "../Views/RootView";
 import Home from "../Components/home/Home";
+import Admin from "../Components/admin.jsx/Admin";
+import Invitacion from "../Components/invitacion/Invitacion";
 
 export const router = createBrowserRouter([
   {
@@ -18,8 +20,8 @@ export const router = createBrowserRouter([
             element: <Home/>,
           },
           {
-            path: "invitacion/:id",
-            element: <p>detail</p>,
+            path: "invitacion",
+            element: <Invitacion/>,
           },
         ],
       },
@@ -29,7 +31,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: "/admin",
-            element: <p>Admin</p>,
+            element: <Admin/>,
           },
         ],
       },
