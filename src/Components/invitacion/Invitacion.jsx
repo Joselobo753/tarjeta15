@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { toast } from "sonner";
-import foto from "../../../public/fondo.jpeg"
+import foto from "../../../public/Fondo.jpeg"
 const Invitacion = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
