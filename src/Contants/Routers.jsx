@@ -5,6 +5,7 @@ import RootView from "../Views/RootView";
 
 import Admin from "../Components/admin.jsx/Admin";
 import Invitacion from "../Components/invitacion/Invitacion";
+import Modalconfir from "../Components/invitacion/Modalconfir";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
             path: "invitacion",
             element: <Invitacion/>,
           },
+          {
+            path: "confirm",
+            element: <Modalconfir/>
+          }
         ],
       },
       {
