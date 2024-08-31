@@ -4,13 +4,13 @@ import Hearder from "../Components/Headers.jsx/Hearder"
 const RootView = () => {
   return (
     <>
-     <Hearder/>
+
      <main className="container my-3 flex-grow-1">
         <Outlet />
 
 
      </main>
-     <footer>Este es el footer</footer>
+     <footer>Te espero</footer>
     </>
   )
 }

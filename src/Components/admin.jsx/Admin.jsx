@@ -41,12 +41,12 @@ const Admin = () => {
   const handleCopyLink = (guest) => {
     const link = `${window.location.origin}/invitacion?familyName=${guest.familyName}&guestCount=${guest.guestCount}`;
     navigator.clipboard.writeText(link)
-      .then(() => alert('¡Link copiado al portapapeles!'))
+      .then(() => alert(`¡Link de invitacion de la familia ${guest.familyName} !`))
       .catch(() => alert('Error al copiar el link.'));
   };
   return (
     <div className="section text-center">
-      <h4 className="text-white">Cargar invitados</h4>
+      <h4 className="titulo">Cargar invitados</h4>
       <div className="form-group">
         <form onSubmit={handleSubmit(handleSubmitForm)}>
           <Input

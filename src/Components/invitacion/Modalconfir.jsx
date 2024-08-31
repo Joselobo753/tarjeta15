@@ -37,14 +37,14 @@ const Modalconfir = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
-      <h2>Confirmar Invitación para {familyName}</h2>
+    <div className='text-center'>
+      <h5 className='titulo'>Confirmar Invitación para familia{familyName}</h5>
       {/* Formulario manejado por react-hook-form */}
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Input para seleccionar la cantidad de invitados */}
         <select
           {...register('guestCount')}
-          style={{ width: '100%', marginBottom: '10px', padding: '8px' }}
+          className='form-style py-2'
         >
           {/* Opciones solo hasta el número máximo de invitados */}
           {[...Array(guestCountFromQuery).keys()].map(i => (
@@ -54,14 +54,16 @@ const Modalconfir = () => {
           ))}
         </select>
         
-        {/* Textarea para los requerimientos especiales */}
+          <div className='py-2'>
+
         <textarea
           {...register('specialRequest')}
           placeholder="¿Alguna persona necesita comida especial?"
-          style={{ width: '100%', marginBottom: '10px', padding: '8px' }}
-        ></textarea>
+          className='form-text'
+          ></textarea>
+          </div>
         
-        {/* Botón para enviar el formulario */}
+      
         <button 
           type="submit"
           style={{ width: '100%', padding: '10px', backgroundColor: '#25D366', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
