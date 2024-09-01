@@ -27,9 +27,9 @@ const Modalconfir = () => {
   
 
     // Construimos la URL de WhatsApp API
-    const whatsappURL = `https://wa.me/3814546513?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/3816743856?text=${encodeURIComponent(message)}`;
 
-    // Abrimos la URL en una nueva pestaña
+    // Abrimos la URL en una nueva pestañanpm 
     window.open(whatsappURL, '_blank');
   };
 
