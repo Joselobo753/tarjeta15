@@ -20,14 +20,15 @@
   min-height: 120vh;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(px);
   background-size: cover;
 }
 
-.foto-presentacion-div {
-  padding: 4px 4px 0px 4px;
-  background-color: white;
-  border: 1px solid black;
+
+.foto-presentacion {
+  height: 200px;
+  object-fit: cover;
+ 
 }
 .flip-card {
   background-color: transparent;
@@ -54,7 +55,8 @@
 .flip-card-back {
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Color de fondo con transparencia */
+ 
+  background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
   backdrop-filter: blur(15px); /* Aplica el blur al fondo */
   -webkit-backdrop-filter: blur(15px);
   backface-visibility: hidden;
@@ -117,7 +119,7 @@
   font-weight: bold;
 }
 .resaltar {
-  color: #ff4196;
+  color: #c32c71;
 }
 p {
   font-family: "Courier New", Courier, monospace;
@@ -231,7 +233,9 @@ p {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-
+.btn-invi{
+  margin: 10px;
+}
 table {
   width: 100%;
   border-collapse: collapse;

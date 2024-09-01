@@ -30,6 +30,9 @@ const Admin = () => {
     
         reset();
       };
+      const encodeFamilyName = (familyName) => {
+        return encodeURIComponent(familyName.trim());
+      };
         // Función para eliminar un invitado
   const handleDeleteGuest = (index) => {
     const updatedGuests = guests.filter((_, i) => i !== index);
@@ -39,10 +42,16 @@ const Admin = () => {
 
   // Función para copiar el link de invitación
   const handleCopyLink = (guest) => {
-    const link = `${window.location.origin}/invitacion?familyName=${guest.familyName}&guestCount=${guest.guestCount}`;
-    navigator.clipboard.writeText(link)
-      .then(() => alert(`¡Link de invitacion de la familia ${guest.familyName} !`))
-      .catch(() => alert('Error al copiar el link.'));
+    const encodedName = encodeFamilyName(guest.familyName);
+    const link = `${window.location.origin}/invitacion?familyName=${encodedName}&guestCount=${guest.guestCount}`;
+  
+    // Mensaje personalizado con saltos de línea usando plantillas de JavaScript
+    const message = `¡Hola, ${guest.familyName}! 🎉\n\nEstamos muy emocionados de invitarles a celebrar los 15 años de Sofía Micaela Lobo. Nos encantaría contar con su presencia en este día tan especial. En el siguiente enlace encontrarán todos los detalles de la misa, la fiesta, y podrán confirmar su asistencia:\n\n${link}\n\nEsperamos verlos y compartir juntos esta ocasión inolvidable. ¡No olviden confirmar su asistencia! 😊\n\n¡Gracias y nos vemos pronto!`;
+  
+    // Copiar el mensaje con el link al portapapeles
+    navigator.clipboard.writeText(message)
+      .then(() => alert(`¡Mensaje de invitación para la familia ${guest.familyName} copiado al portapapeles!`))
+      .catch(() => alert('Error al copiar el mensaje de invitación.'));
   };
   return (
     <div className="section text-center">

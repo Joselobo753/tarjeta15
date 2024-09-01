@@ -19,15 +19,12 @@ const Modalconfir = () => {
 
   // Función para manejar el envío de WhatsApp
   const onSubmit = (data) => {
-    const { guestCount, specialRequest } = data;
+    const { guestCount  } = data;
 
     // Mensaje predeterminado basado en la cantidad de personas
     let message = `Confirmo la invitación para la familia ${familyName} para la cantidad ${guestCount} persona(s).`;
 
-    // Añadir información adicional si se necesita comida especial
-    if (specialRequest) {
-      message += ` Necesitamos una comida especial: ${specialRequest}.`;
-    }
+  
 
     // Construimos la URL de WhatsApp API
     const whatsappURL = `https://wa.me/3814546513?text=${encodeURIComponent(message)}`;
@@ -38,7 +35,7 @@ const Modalconfir = () => {
 
   return (
     <div className='text-center'>
-      <h5 className='titulo'>Confirmar Invitación para familia{familyName}</h5>
+      <h5 className='titulo'>Confirmar Invitación para familia {familyName}</h5>
       {/* Formulario manejado por react-hook-form */}
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Input para seleccionar la cantidad de invitados */}
@@ -54,14 +51,8 @@ const Modalconfir = () => {
           ))}
         </select>
         
-          <div className='py-2'>
 
-        <textarea
-          {...register('specialRequest')}
-          placeholder="¿Alguna persona necesita comida especial?"
-          className='form-text'
-          ></textarea>
-          </div>
+     
         
       
         <button 
