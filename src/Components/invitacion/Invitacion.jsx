@@ -58,7 +58,7 @@ const Invitacion = () => {
                 <div>
                   <img src={catedral} alt="iglesia" className="w-25"/>
                   <h2 className="titulo resaltar">Mi misa se celebrara el dia</h2>
-                  <p className="resaltar">8 de septiembre a horas 20:00</p>
+                  <p className="resaltar">8 de septiembre a horas 20:30</p>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314.67455090579284!2d-65.22017669537024!3d-26.83562185325365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225dafba2b52cf%3A0xdf5b7059b17ca3f!2sIglesia%20San%20Gerardo!5e0!3m2!1ses!2sar!4v1725160319789!5m2!1ses!2sar" loading="lazy" className="border-map"></iframe>
                   <p>Av. Alem 552 San Miguel de Tucumán</p>
                 </div>
