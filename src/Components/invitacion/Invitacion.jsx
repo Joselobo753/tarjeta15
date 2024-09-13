@@ -90,7 +90,7 @@ const Invitacion = () => {
                   
                   <div>
                     <h3 className="resaltar">Confirmar presencia</h3>
-                    <p className="resaltar">hasta el dia 10 de septiembre</p>
+                    <p className="resaltar">hasta el dia 17 de septiembre</p>
                     <Link to={confirmLink}>
                       <button>Confirmar</button>
                     </Link>
